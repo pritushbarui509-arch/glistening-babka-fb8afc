@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120d05">
+  <meta name="robots" content="noindex">
+  <title>PRITUSH VIP · Owner Access</title>
+  <link rel="stylesheet" href="/access.css">
+  <script src="/owner.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="brand"><span class="brand-icon" aria-hidden="true">👑</span><h2 class="brand-name">PRITUSH VIP</h2><p class="eyebrow">OWNER CONTROL</p></header>
+    <section class="card" aria-labelledby="owner-title">
+      <span class="badge">ACCESS MANAGEMENT</span>
+      <h1 id="owner-title">Your key. Your access.</h1>
+      <div id="owner-login">
+        <p>Sign in with your invited Netlify Identity owner account. An admin role is required.</p>
+        <form id="owner-login-form">
+          <div id="email-field"><label for="owner-email">Owner email</label><input id="owner-email" type="email" autocomplete="username" maxlength="254" required></div>
+          <label id="password-label" for="owner-password">Password</label>
+          <input id="owner-password" type="password" minlength="8" maxlength="256" autocomplete="current-password" required>
+          <button id="login-button" type="submit">OWNER SIGN IN →</button>
+        </form>
+      </div>
+      <div id="owner-controls" hidden>
+        <p id="key-status">Checking access status…</p>
+        <form id="key-form">
+          <label for="new-key">Set or replace access key</label>
+          <input id="new-key" type="password" minlength="16" maxlength="256" autocomplete="off" spellcheck="false" autocapitalize="none" required>
+          <p class="small">Use a password manager to make a strong random key of at least 16 characters. Keep it securely before saving: it cannot be retrieved here.</p>
+          <label class="check"><input type="checkbox" required><span>I have kept the new key securely. Saving it will lock out existing sessions.</span></label>
+          <button type="submit">SAVE ACCESS KEY</button>
+        </form>
+        <hr>
+        <form id="revoke-form">
+          <label class="check"><input type="checkbox" required><span>Disable the current key and lock out everyone until a new key is saved.</span></label>
+          <button type="submit" class="secondary">DISABLE ALL ACCESS</button>
+        </form>
+        <button id="owner-signout" type="button" class="secondary">OWNER SIGN OUT</button>
+      </div>
+      <p id="owner-message" class="message" role="status" aria-live="polite"></p>
+      <noscript><p class="message">JavaScript is required to manage access.</p></noscript>
+    </section>
+    <footer class="footer">Never share your owner login. Share only the access key.<br><a href="/">← Back to key entry</a></footer>
+  </main>
+</body>
+</html>

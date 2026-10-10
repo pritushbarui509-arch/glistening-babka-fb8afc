@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root{color-scheme:dark;--gold:#ffd700;--text:#fff5d3;--muted:#bcaa7f;--line:#655125;--surface:#201809;}
+*{box-sizing:border-box;}
+body{margin:0;min-height:100svh;background:#120d05;color:var(--text);font-family:'Rajdhani',sans-serif;display:grid;place-items:center;padding:32px 20px;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 15%,#61450b45,transparent 65%),linear-gradient(#ffd70004 1px,transparent 1px),linear-gradient(90deg,#ffd70004 1px,transparent 1px);background-size:auto,48px 48px,48px 48px;}
+main{position:relative;width:min(100%,460px);}
+.brand{text-align:center;margin-bottom:30px;}
+.brand-icon{font-size:36px;display:block;margin-bottom:10px;}
+.brand-name{font-family:'Orbitron',monospace;font-size:20px;letter-spacing:4px;color:var(--gold);margin:0;}
+.eyebrow{font-family:'Orbitron',monospace;color:var(--muted);font-size:9px;letter-spacing:3px;margin:12px 0 0;}
+.card{background:linear-gradient(145deg,#281e0c,#191309);border:1px solid var(--line);border-top:3px solid var(--gold);padding:32px;border-radius:4px;box-shadow:0 24px 70px #0006;animation:enter .45s ease-out;}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1.5px;color:var(--gold);margin-bottom:18px;}
+.badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px #ffd70080;}
+h1{font-size:32px;line-height:1.1;margin:0 0 12px;font-weight:700;}
+p{font-size:17px;line-height:1.5;margin:0 0 24px;color:var(--muted);}
+label{display:block;font-weight:700;font-size:15px;letter-spacing:.5px;margin-bottom:8px;}
+input{width:100%;padding:14px;border:1px solid var(--line);background:#100c04;color:var(--text);font:18px 'Rajdhani',sans-serif;border-radius:3px;margin-bottom:18px;}
+input:focus{outline:2px solid var(--gold);outline-offset:2px;}
+button{width:100%;border:1px solid #ffea7d;border-radius:3px;background:var(--gold);color:#211600;padding:15px 12px;cursor:pointer;font:700 11px 'Orbitron',monospace;letter-spacing:1px;transition:transform .15s,background .15s;}
+button:hover:not(:disabled){background:#ffe86a;transform:translateY(-1px);}
+button:active:not(:disabled){transform:translateY(1px);}
+button:disabled{opacity:.6;cursor:wait;}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:5px;}
+.secondary{background:transparent;color:var(--text);border-color:var(--line);margin-top:12px;}
+.secondary:hover:not(:disabled){background:#ffffff0d;}
+.message{font-size:15px;min-height:23px;margin:16px 0 0;color:#ffe3ac;}
+.small{font-size:14px;margin:16px 0 0;}
+.footer{text-align:center;font-size:13px;line-height:1.6;margin-top:24px;color:var(--muted);}
+a{color:var(--muted);text-underline-offset:4px;}
+.footer a{display:inline-block;margin-top:12px;}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0;}
+.check{display:flex;align-items:start;gap:10px;color:var(--muted);font-size:14px;font-weight:500;}
+.check input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--gold);flex-shrink:0;}
+[hidden]{display:none!important;}
+@keyframes enter{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:400px){.card{padding:25px 20px;}.brand-name{font-size:17px;}h1{font-size:28px;}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}

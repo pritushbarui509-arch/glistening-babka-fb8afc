@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hi-Latn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120d05">
+  <meta name="description" content="PRITUSH VIP dashboard. Enter your access key to open.">
+  <title>PRITUSH VIP · Key Access</title>
+  <link rel="stylesheet" href="/access.css">
+  <script src="/access.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="brand">
+      <span class="brand-icon" aria-hidden="true">👑</span>
+      <h2 class="brand-name">PRITUSH VIP</h2>
+      <p class="eyebrow">PRIVATE ACCESS · MEMBERS ONLY</p>
+    </header>
+    <section class="card" aria-labelledby="access-title">
+      <span class="badge">KEY-PROTECTED DASHBOARD</span>
+      <h1 id="access-title">Apni key enter karein.</h1>
+      <p>Sirf valid key se dashboard khulega. Access key website owner se lein.</p>
+      <form id="unlock-form">
+        <label for="access-key">Access key</label>
+        <input id="access-key" name="key" type="password" minlength="16" maxlength="256" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="access-message" required>
+        <button id="unlock-button" type="submit">UNLOCK DASHBOARD →</button>
+      </form>
+      <p id="access-message" class="message" role="status" aria-live="polite"></p>
+      <p class="small">Key private rakhein. Session 8 ghante baad expire hota hai.</p>
+      <noscript><p class="message">Dashboard kholne ke liye JavaScript enable karein.</p></noscript>
+    </section>
+    <footer class="footer">Historical patterns guaranteed predictions nahi hain.<br>No bets or payments are processed.<br><a href="/owner.html">Owner · Manage access</a></footer>
+  </main>
+</body>
+</html>
